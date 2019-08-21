@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flash</string>
+    <string name="title_main">Home</string>
+    <string name="title_magazines">Magazines</string>
+    <string name="title_search">Search</string>
+    <string name="title_account">Account</string>
+</resources>
