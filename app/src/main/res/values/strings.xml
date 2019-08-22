@@ -1,7 +1,67 @@
 <resources>
-    <string name="app_name">Flash</string>
     <string name="title_main">Home</string>
     <string name="title_magazines">Magazines</string>
     <string name="title_search">Search</string>
     <string name="title_account">Account</string>
+
+    <string name="app_name">МЕДИА СФЕРА</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="top_banner_title">Архив патологии</string>
+    <string name="top_banner_title_caption">том 72, №1 (2018)</string>
+    <string name="top_banner_btn_left">Журнал</string>
+    <string name="top_banner_btn_right">Интересно</string>
+    <string name="top_banner_numbers_1">20</string>
+    <string name="top_banner_numbers_1_caption">лет</string>
+    <string name="top_banner_numbers_2">339</string>
+    <string name="top_banner_numbers_2_caption">цитирований</string>
+    <string name="top_banner_numbers_3">444</string>
+    <string name="top_banner_numbers_3_caption">выпусков</string>
+    <string name="top_banner_numbers_4">286</string>
+    <string name="top_banner_numbers_4_caption">статей</string>
+    <string name="open_articles">Открытые статьи</string>
+    <string name="last_magazine">Последние журналы</string>
+
+    <string name="magazine1_discription">Молекулярно – биологическая характеристика возбудителя и патологоанатомические
+        аспекты летальных исходов от туберкулеза в Иркутске 2008–2011 гг.
+    </string>
+    <string name="magazine2_discription">Патологоанатомические аспекты летальных исходов от туберкулеза</string>
+    <string name="magazine1_data">21.09.19</string>
+    <string name="magazine2_data">16.12.18</string>
+    <string name="magazine_1">Журнал 1</string>
+
+    <string name="publication_banner">Публикация в международных и российских библиографических базах данных</string>
+    <string name="logo3">Medline</string>
+    <string name="logo4">ScienceIndex</string>
+    <string name="logo2">Google Scholar</string>
+    <string name="logo1">Scopus</string>
+
+    <string name="tabbar1">Мои подписки</string>
+    <string name="tabbar2">Все журналы</string>
+    <string name="tabbar3">Поиск</string>
+    <string name="tabbar4">Аккаунт</string>
+
+    <string name="all_magazines">Все журналы</string>
+    <string name="search_page">Поиск</string>
+    <string name="account_page">Аккаунт</string>
+
+    <string name="qr_hint">QR код</string>
+    <string name="logo_name">Логотип медиасферы</string>
+
+    <string name="main_tab_1">Читаю</string>
+    <string name="main_tab_2">Отложенные</string>
+    <string name="main_tab_3">Архив</string>
+
+    <string name="main_tab_2_title">Отложенные журналы и статьи</string>
+    <string name="main_tab_3_title">Архив журналов и статей</string>
+    <string name="now_read">Сейчас читают</string>
+    <string name="discription_btn_all_magazines">Для начала чтения приобретите журнал в нашей библиотеке</string>
+    <string name="discription_btn_login">или войдите в вашу учетную запись</string>
+    <string name="black_btn_all_magazines">Все журналы</string>
+    <string name="orange_btn_login">Регистрация / Вход</string>
+    <string name="book_discription">Книга</string>
+    <string name="arrow_btn_discription">Стрелка перейти по со кнопке</string>
 </resources>
