@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tabs_layout_marginStart"
+            android:layout_marginEnd="@dimen/tabs_layout_marginEnd"
+            android:layout_marginTop="@dimen/tabs_layout_marginTop"
+            android:layout_marginBottom="@dimen/tabs_layout_marginBottom"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Title"
+                android:text="@string/now_read"/>
+            <View style="@style/Divider.Horizontal"/>
+            <TextView style="@style/DiscriptionBtn"
+                android:text="@string/discription_btn_all_magazines"/>
+            <RelativeLayout
+                android:id="@+id/go_to_all_magazines"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:focusable="true">
+                <ImageView android:id="@+id/book_icon"
+                    android:layout_width="27dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/book"
+                    android:contentDescription="@string/book_discription"
+                    android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@id/book_icon"
+                    android:textSize="15sp"
+                    android:text="@string/black_btn_all_magazines"/>
+                <ImageView android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_right_white"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/arrow_btn_discription"/>
+            </RelativeLayout>
+
+            <TextView style="@style/DiscriptionBtn"
+                android:text="@string/discription_btn_login"/>
+
+            <RelativeLayout
+                android:id="@+id/go_to_login"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/orange"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:focusable="true">
+                <ImageView android:id="@+id/user_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/user"
+                    android:contentDescription="@string/book_discription"
+                    android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@id/user_icon"
+                    android:textSize="15sp"
+                    android:text="@string/orange_btn_login"/>
+                <ImageView android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_right_white"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/arrow_btn_discription"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

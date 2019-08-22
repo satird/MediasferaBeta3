@@ -44,8 +44,19 @@ public class MainFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            return MainChildFragment.newInstance(position);
+//            return MainChildTab1Fragment.newInstance(position);
+            switch (position) {
+                case 0:
+                    return MainChildTab1Fragment.newInstance();
+                case 1:
+                    return MainChildTab2Fragment.newInstance();
+                case 2:
+                    return MainChildTab3Fragment.newInstance();
+                default:
+                    return null;
+            }
         }
+
 
         @Override
         public int getCount() {
