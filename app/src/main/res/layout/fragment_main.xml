@@ -2,12 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
+        style="@style/TabLayout"
+        app:tabTextAppearance="@style/AppTabTextAppearance"
+        app:tabIndicatorHeight="1dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:tabIndicatorGravity="bottom"
+        android:layout_gravity="center"
+        app:tabUnboundedRipple="true"
+        android:background="@drawable/tab_bg"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
