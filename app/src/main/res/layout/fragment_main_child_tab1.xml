@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_child_fragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="vertical">
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +47,8 @@
                     android:textColor="@color/white"
                     android:layout_toEndOf="@id/book_icon"
                     android:textSize="15sp"
-                    android:text="@string/black_btn_all_magazines"/>
+                    android:text="@string/black_btn_all_magazines"
+                    tools:ignore="RelativeOverlap" />
                 <ImageView android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:scaleType="centerInside"
@@ -80,7 +84,8 @@
                     android:textColor="@color/white"
                     android:layout_toEndOf="@id/user_icon"
                     android:textSize="15sp"
-                    android:text="@string/orange_btn_login"/>
+                    android:text="@string/orange_btn_login"
+                    tools:ignore="RelativeOverlap" />
                 <ImageView android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:scaleType="centerInside"
@@ -91,8 +96,31 @@
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorLightBg"
             android:orientation="vertical">
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tabs_layout_marginStart"
+                android:layout_marginEnd="@dimen/tabs_layout_marginEnd"
+                android:layout_marginTop="@dimen/tabs_layout_marginTop"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Title"
+                    android:text="@string/cards_archive_available"/>
+                <View style="@style/Divider.Horizontal"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recycler_view_home"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
         </LinearLayout>
 
     </LinearLayout>

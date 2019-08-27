@@ -30,7 +30,7 @@ public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.Data
         }
     }
 
-    List<DataMagazines> dataMagazines;
+    private List<DataMagazines> dataMagazines;
 
     MagazinesAdapter(List<DataMagazines> dataMagazines){
         this.dataMagazines = dataMagazines;

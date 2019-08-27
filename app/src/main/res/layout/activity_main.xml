@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:descendantFocusability="blocksDescendants"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,8 +19,8 @@
             style="@style/Toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:layout_scrollFlags="scroll|enterAlways|snap">
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/logoXmarks"

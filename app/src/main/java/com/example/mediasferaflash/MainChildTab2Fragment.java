@@ -31,7 +31,7 @@ public class MainChildTab2Fragment extends Fragment {
 
         rv = (RecyclerView)rootView.findViewById(R.id.rv);
         rv.setHasFixedSize(true);
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(llm);
 
         initializeData();
@@ -56,6 +56,9 @@ public class MainChildTab2Fragment extends Fragment {
 
     private void initializeData() {
         dataMagazines = new ArrayList<>();
+        dataMagazines.add(new DataMagazines("Magazine1", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
+        dataMagazines.add(new DataMagazines("Magazine2", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
+        dataMagazines.add(new DataMagazines("Magazine2", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
         dataMagazines.add(new DataMagazines("Magazine1", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
         dataMagazines.add(new DataMagazines("Magazine2", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
         dataMagazines.add(new DataMagazines("Magazine2", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
