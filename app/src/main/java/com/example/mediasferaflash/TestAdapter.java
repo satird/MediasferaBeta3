@@ -46,10 +46,11 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.DataTestViewHo
 
     @Override
     public void onBindViewHolder(@NonNull DataTestViewHolder holder, int position) {
-        holder.magName.setText(dataTest.get(position).magazineNameN);
-        holder.magInfo.setText(dataTest.get(position).magazineInfoN);
-        holder.magDiscription.setText(dataTest.get(position).magazineDiscriptionN);
-        holder.magCover.setImageResource(dataTest.get(position).magazineCoverN);
+        DataTest newTest = dataTest.get(position);
+        holder.magName.setText(newTest.getMagazineNameN());
+        holder.magInfo.setText(newTest.getMagazineInfoN());
+        holder.magDiscription.setText(dataTest.get(position).getMagazineDiscriptionN());
+        holder.magCover.setImageResource(dataTest.get(position).getMagazineCoverN());
     }
 
     @Override

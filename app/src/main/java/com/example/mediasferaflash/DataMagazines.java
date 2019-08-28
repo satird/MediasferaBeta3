@@ -1,49 +1,49 @@
 package com.example.mediasferaflash;
 
 public class DataMagazines {
-    String magazineName;
-    String magazineInfo;
-    String magazineDiscription;
-    int magazineCover;
+    private String magazineName;
+    private String magazineInfo;
+    private String magazineDescription;
+    private int magazineCover;
 
-    public DataMagazines(String magazineName, String magazineInfo, String magazineDiscription, int magazineCover) {
+    public DataMagazines(String magazineName, String magazineInfo, String magazineDescription, int magazineCover) {
         this.magazineName = magazineName;
         this.magazineInfo = magazineInfo;
-        this.magazineDiscription = magazineDiscription;
+        this.magazineDescription = magazineDescription;
         this.magazineCover = magazineCover;
     }
 
-//    public String getMagazineName() {
-//        return magazineName;
-//    }
-//
-//    public void setMagazineName(String magazineName) {
-//        this.magazineName = magazineName;
-//    }
-//
-//    public String getMagazineInfo() {
-//        return magazineInfo;
-//    }
-//
-//    public void setMagazineInfo(String magazineInfo) {
-//        this.magazineInfo = magazineInfo;
-//    }
-//
-//    public String getMagazineDiscription() {
-//        return magazineDiscription;
-//    }
-//
-//    public void setMagazineDiscription(String magazineDiscription) {
-//        this.magazineDiscription = magazineDiscription;
-//    }
-//
-//    public int getMagazineCover() {
-//        return magazineCover;
-//    }
-//
-//    public void setMagazineCover(int magazineCover) {
-//        this.magazineCover = magazineCover;
-//    }
+    public String getMagazineName() {
+        return magazineName;
+    }
+
+    public void setMagazineName(String magazineName) {
+        this.magazineName = magazineName;
+    }
+
+    public String getMagazineInfo() {
+        return magazineInfo;
+    }
+
+    public void setMagazineInfo(String magazineInfo) {
+        this.magazineInfo = magazineInfo;
+    }
+
+    public String getMagazineDiscription() {
+        return magazineDescription;
+    }
+
+    public void setMagazineDiscription(String magazineDiscription) {
+        this.magazineDescription = magazineDiscription;
+    }
+
+    public int getMagazineCover() {
+        return magazineCover;
+    }
+
+    public void setMagazineCover(int magazineCover) {
+        this.magazineCover = magazineCover;
+    }
 
 //    private List<DataMagazines> dataMagazines;
 //    private void initializeData(){

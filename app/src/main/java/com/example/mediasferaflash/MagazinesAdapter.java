@@ -1,5 +1,7 @@
 package com.example.mediasferaflash;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.DataMagazinesViewHolder> {
-
-    public static class DataMagazinesViewHolder extends RecyclerView.ViewHolder {
+    private List<DataMagazines> dataMagazines;
+    private Context context;
+    public class DataMagazinesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CardView cv;
         TextView magName;
         TextView magInfo;
@@ -22,18 +25,33 @@ public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.Data
         ImageView magCover;
         DataMagazinesViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
+
             cv = (CardView)itemView.findViewById(R.id.cv);
             magName = (TextView)itemView.findViewById(R.id.magazineName);
             magInfo = (TextView)itemView.findViewById(R.id.magazineInfo);
             magDiscription = (TextView)itemView.findViewById(R.id.magazineDiscription);
             magCover = (ImageView)itemView.findViewById(R.id.magazineCover);
         }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            DataMagazines dataMagazine = dataMagazines.get(position);
+
+            Intent intent = new Intent(context, MagazinDetail.class);
+            intent.putExtra("imageMagazineDetail", dataMagazine.getMagazineCover());
+            intent.putExtra("titleMagazineDetail", dataMagazine.getMagazineName());
+            intent.putExtra("infoMagazineDetail", dataMagazine.getMagazineInfo());
+            intent.putExtra("descriptionMagazineDetail", dataMagazine.getMagazineDiscription());
+            context.startActivity(intent);
+        }
     }
 
-    private List<DataMagazines> dataMagazines;
 
-    MagazinesAdapter(List<DataMagazines> dataMagazines){
+    MagazinesAdapter(List<DataMagazines> dataMagazines, Context context){
         this.dataMagazines = dataMagazines;
+        this.context = context;
     }
 
     @NonNull
@@ -46,10 +64,10 @@ public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.Data
 
     @Override
     public void onBindViewHolder(@NonNull DataMagazinesViewHolder holder, int position) {
-        holder.magName.setText(dataMagazines.get(position).magazineName);
-        holder.magInfo.setText(dataMagazines.get(position).magazineInfo);
-        holder.magDiscription.setText(dataMagazines.get(position).magazineDiscription);
-        holder.magCover.setImageResource(dataMagazines.get(position).magazineCover);
+        holder.magName.setText(dataMagazines.get(position).getMagazineName());
+        holder.magInfo.setText(dataMagazines.get(position).getMagazineInfo());
+        holder.magDiscription.setText(dataMagazines.get(position).getMagazineDiscription());
+        holder.magCover.setImageResource(dataMagazines.get(position).getMagazineCover());
     }
 
     @Override

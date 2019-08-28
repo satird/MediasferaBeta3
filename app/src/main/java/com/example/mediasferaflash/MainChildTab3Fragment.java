@@ -50,7 +50,7 @@ public class MainChildTab3Fragment extends Fragment {
     }
 
     private void initializeAdapter() {
-        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines);
+        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines, getActivity());
         rv.setAdapter(adapter);
     }
 

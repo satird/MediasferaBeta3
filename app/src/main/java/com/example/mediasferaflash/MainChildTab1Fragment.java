@@ -58,13 +58,13 @@ public class MainChildTab1Fragment extends Fragment {
     }
 
     private void initializeAdapter() {
-        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines);
+        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines, getActivity());
         rv.setAdapter(adapter);
     }
 
     private void initializeData() {
         dataMagazines = new ArrayList<>();
-        dataMagazines.add(new DataMagazines("Magazine3", "01.01.2019", "Magazine3 discription", R.drawable.magazine1));
+        dataMagazines.add(new DataMagazines(UtilsData.title1, UtilsData.info1, UtilsData.description1, UtilsData.imagazineImage1));
         dataMagazines.add(new DataMagazines("Magazine4", "02.02.2019", "Magazine4 discription", R.drawable.magazine2));
         dataMagazines.add(new DataMagazines("Magazine5", "03.03.2019", "Magazine5 discription", R.drawable.magazine3));
         dataMagazines.add(new DataMagazines("Magazine3", "01.01.2019", "Magazine3 discription", R.drawable.magazine1));
