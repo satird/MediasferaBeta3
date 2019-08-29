@@ -15,19 +15,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainChildTab2Fragment extends Fragment {
+public class FragmentChildMainTab3 extends Fragment {
     private List<DataMagazines> dataMagazines;
     private RecyclerView rv;
 
-    public static MainChildTab2Fragment newInstance() {
-        return new MainChildTab2Fragment();
+    public static FragmentChildMainTab3 newInstance() {
+        return new FragmentChildMainTab3();
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View rootView = inflater.inflate(R.layout.fragment_main_child_tab2, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_main_child_tab3, container, false);
 
         rv = (RecyclerView)rootView.findViewById(R.id.rv);
         rv.setHasFixedSize(true);
@@ -39,7 +39,7 @@ public class MainChildTab2Fragment extends Fragment {
 
 
 
-//        MagazinesAdapter adapter = new MagazinesAdapter();
+//        AdapterMagazines adapter = new AdapterMagazines();
 //        rv.setAdapter(adapter);
 
 //        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
@@ -50,17 +50,17 @@ public class MainChildTab2Fragment extends Fragment {
     }
 
     private void initializeAdapter() {
-        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines, getActivity());
+        AdapterMagazines adapter = new AdapterMagazines(dataMagazines, getActivity());
         rv.setAdapter(adapter);
     }
 
     private void initializeData() {
         dataMagazines = new ArrayList<>();
-        dataMagazines.add(new DataMagazines("Magazine1", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
-        dataMagazines.add(new DataMagazines("Magazine2", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
-        dataMagazines.add(new DataMagazines("Magazine2", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
-        dataMagazines.add(new DataMagazines("Magazine1", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
-        dataMagazines.add(new DataMagazines("Magazine2", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
-        dataMagazines.add(new DataMagazines("Magazine2", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
+        dataMagazines.add(new DataMagazines("Magazine9", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
+        dataMagazines.add(new DataMagazines("Magazine9", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
+        dataMagazines.add(new DataMagazines("Magazine9", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
+        dataMagazines.add(new DataMagazines("Magazine9", "01.01.2019", "Magazine1 discription", R.drawable.magazine1));
+        dataMagazines.add(new DataMagazines("Magazine9", "02.02.2019", "Magazine2 discription", R.drawable.magazine2));
+        dataMagazines.add(new DataMagazines("Magazine9", "03.03.2019", "Magazine3 discription", R.drawable.magazine3));
     }
 }

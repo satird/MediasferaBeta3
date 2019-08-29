@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainChildTab1Fragment extends Fragment {
+public class FragmentChildMainTab1 extends Fragment {
     private List<DataMagazines> dataMagazines;
     private List<DataTest> dataTest;
     private RecyclerView rv;
     private RecyclerView rv2;
 
-    public static MainChildTab1Fragment newInstance() {
-        return new MainChildTab1Fragment();
+    public static FragmentChildMainTab1 newInstance() {
+        return new FragmentChildMainTab1();
     }
 
     @Nullable
@@ -58,7 +58,7 @@ public class MainChildTab1Fragment extends Fragment {
     }
 
     private void initializeAdapter() {
-        MagazinesAdapter adapter = new MagazinesAdapter(dataMagazines, getActivity());
+        AdapterMagazines adapter = new AdapterMagazines(dataMagazines, getActivity());
         rv.setAdapter(adapter);
     }
 
@@ -73,7 +73,7 @@ public class MainChildTab1Fragment extends Fragment {
     }
 
     private void initializeAdapterN() {
-        TestAdapter adapter = new TestAdapter(dataTest);
+        AdapterTest adapter = new AdapterTest(dataTest);
         rv2.setAdapter(adapter);
     }
 

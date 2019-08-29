@@ -80,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return MainFragment.newInstance();
+                    return FragmentMain.newInstance();
                 case 1:
-                    return MagazinesFragment.newInstance();
+                    return FragmentMagazines.newInstance();
                 case 2:
-                    return SearchFragment.newInstance();
+                    return FragmentSearch.newInstance();
                 case 3:
-                    return AccountFragment.newInstance();
+                    return FragmentAccount.newInstance();
             }
             return null;
         }

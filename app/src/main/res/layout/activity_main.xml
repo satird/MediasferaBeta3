@@ -43,7 +43,7 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.example.mediasferaflash.CustomViewPager
+    <com.example.mediasferaflash.ViewPagerCustom
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

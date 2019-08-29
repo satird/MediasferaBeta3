@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.DataMagazinesViewHolder> {
+public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.DataMagazinesViewHolder> {
     private List<DataMagazines> dataMagazines;
     private Context context;
     public class DataMagazinesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -39,7 +39,7 @@ public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.Data
             int position = getAdapterPosition();
             DataMagazines dataMagazine = dataMagazines.get(position);
 
-            Intent intent = new Intent(context, MagazinDetail.class);
+            Intent intent = new Intent(context, DetailMagazin.class);
             intent.putExtra("imageMagazineDetail", dataMagazine.getMagazineCover());
             intent.putExtra("titleMagazineDetail", dataMagazine.getMagazineName());
             intent.putExtra("infoMagazineDetail", dataMagazine.getMagazineInfo());
@@ -49,7 +49,7 @@ public class MagazinesAdapter extends RecyclerView.Adapter<MagazinesAdapter.Data
     }
 
 
-    MagazinesAdapter(List<DataMagazines> dataMagazines, Context context){
+    AdapterMagazines(List<DataMagazines> dataMagazines, Context context){
         this.dataMagazines = dataMagazines;
         this.context = context;
     }

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MagazineCardActivity extends Activity {
+public class CardActivityMagazine extends Activity {
     TextView magName;
     TextView magInfo;
     TextView magDiscription;

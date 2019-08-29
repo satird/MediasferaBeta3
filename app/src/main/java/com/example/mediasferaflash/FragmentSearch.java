@@ -10,13 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-public class MagazinesFragment extends Fragment {
-    public static MagazinesFragment newInstance() {
-        return new MagazinesFragment();
+public class FragmentSearch extends Fragment {
+    public static FragmentSearch newInstance() {
+        return new FragmentSearch();
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_magazines, container, false);
+        return inflater.inflate(R.layout.fragment_search, container, false);
     }
 }

@@ -15,9 +15,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 
-public class MainFragment extends Fragment {
-    public static MainFragment newInstance() {
-        return new MainFragment();
+public class FragmentMain extends Fragment {
+    public static FragmentMain newInstance() {
+        return new FragmentMain();
     }
     @Nullable
     @Override
@@ -45,14 +45,14 @@ public class MainFragment extends Fragment {
         @NonNull
         @Override
         public Fragment getItem(int position) {
-//            return MainChildTab1Fragment.newInstance(position);
+//            return FragmentChildMainTab1.newInstance(position);
             switch (position) {
                 case 0:
-                    return MainChildTab1Fragment.newInstance();
+                    return FragmentChildMainTab1.newInstance();
                 case 1:
-                    return MainChildTab2Fragment.newInstance();
+                    return FragmentChildMainTab2.newInstance();
                 case 2:
-                    return MainChildTab3Fragment.newInstance();
+                    return FragmentChildMainTab3.newInstance();
                 default:
                     return null;
             }

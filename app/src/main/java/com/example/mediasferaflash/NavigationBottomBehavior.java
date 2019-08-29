@@ -10,8 +10,8 @@ import androidx.core.view.ViewCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public final class BottomNavigationBehavior extends CoordinatorLayout.Behavior<BottomNavigationView> {
-    public BottomNavigationBehavior(@NonNull Context context, @NonNull AttributeSet attrs) {
+public final class NavigationBottomBehavior extends CoordinatorLayout.Behavior<BottomNavigationView> {
+    public NavigationBottomBehavior(@NonNull Context context, @NonNull AttributeSet attrs) {
         super(context, attrs);
     }
 

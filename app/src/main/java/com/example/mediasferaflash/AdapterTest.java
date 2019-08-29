@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class TestAdapter extends RecyclerView.Adapter<TestAdapter.DataTestViewHolder> {
+public class AdapterTest extends RecyclerView.Adapter<AdapterTest.DataTestViewHolder> {
     private List<DataTest> dataTest;
 
     public static class DataTestViewHolder extends RecyclerView.ViewHolder {
@@ -32,7 +32,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.DataTestViewHo
     }
 
 
-    TestAdapter(List<DataTest> dataTest){
+    AdapterTest(List<DataTest> dataTest){
         this.dataTest = dataTest;
     }
 

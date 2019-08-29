@@ -2,17 +2,32 @@ package com.example.mediasferaflash;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-public class MagazinDetail extends AppCompatActivity {
+import java.util.Objects;
+
+public class DetailMagazin extends AppCompatActivity {
+    private Toolbar toolbar;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.qr_code_menu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_magazin_detail);
+
+        toolbar = findViewById(R.id.toolbar_logo_qr);
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         TextView title = findViewById(R.id.magazineDetailTitle);
         TextView info = findViewById(R.id.magazineDetailInfo);
