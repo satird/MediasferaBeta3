@@ -3,11 +3,15 @@ package com.example.mediasferaflash;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -31,6 +35,7 @@ public class DetailMagazin extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar_logo_qr);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.arrow_left_black);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -45,7 +50,25 @@ public class DetailMagazin extends AppCompatActivity {
             title.setText(intent.getStringExtra("titleMagazineDetail"));
             info.setText(intent.getStringExtra("infoMagazineDetail"));
             description.setText(intent.getStringExtra("descriptionMagazineDetail"));
-            image.setImageResource(intent.getIntExtra("imageMagazineDetail", 0));
+//            image.setImageResource(intent.getIntExtra("imageMagazineDetail", 0));
+            Picasso.get().load(intent.getStringExtra("imageMagazineDetail")).into(image);
+
+//        holder.magDiscription.setText(dataMagazines.get(position).getMagazineDiscription());
+//        holder.magCover.setImageResource(dataMagazines.get(position).getMagazineCover());
+//        Picasso.get().load(dataMagazines.get(position).getMagazineCover()).fit().centerInside().into(holder.magCover);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_qr) {
+            Intent openQr = new Intent(this, ActivityQr.class);
+            startActivity(openQr);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

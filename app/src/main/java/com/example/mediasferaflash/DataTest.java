@@ -13,6 +13,9 @@ public class DataTest {
         this.magazineCoverN = magazineCoverY;
     }
 
+    public DataTest() {
+    }
+
     public DataTest(String magazineNameN, String magazineInfoN, int magazineCoverN) {
         this.magazineNameN = magazineNameN;
         this.magazineInfoN = magazineInfoN;

@@ -4,12 +4,26 @@ public class DataMagazines {
     private String magazineName;
     private String magazineInfo;
     private String magazineDescription;
-    private int magazineCover;
+    private String magazineCover;
 
-    public DataMagazines(String magazineName, String magazineInfo, String magazineDescription, int magazineCover) {
+    public DataMagazines(String magazineName, String magazineInfo, String magazineDescription, String magazineCover) {
         this.magazineName = magazineName;
         this.magazineInfo = magazineInfo;
         this.magazineDescription = magazineDescription;
+        this.magazineCover = magazineCover;
+    }
+
+    public DataMagazines() {
+    }
+
+    public DataMagazines(String magazineName, String  magazineCover) {
+        this.magazineName = magazineName;
+        this.magazineCover = magazineCover;
+    }
+
+    public DataMagazines(String magazineName, String magazineInfo, String magazineCover) {
+        this.magazineName = magazineName;
+        this.magazineInfo = magazineInfo;
         this.magazineCover = magazineCover;
     }
 
@@ -37,11 +51,11 @@ public class DataMagazines {
         this.magazineDescription = magazineDiscription;
     }
 
-    public int getMagazineCover() {
+    public String getMagazineCover() {
         return magazineCover;
     }
 
-    public void setMagazineCover(int magazineCover) {
+    public void setMagazineCover(String magazineCover) {
         this.magazineCover = magazineCover;
     }
 
