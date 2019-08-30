@@ -73,4 +73,5 @@
     <string name="cards_archive_available">Вам доступен архив</string>
     <string name="card_magazine_deferred">Отложенные журналы и статьи</string>
     <string name="card_magazine_archive">Архив журналов и статей</string>
+    <string name="back_hint">Назад</string>
 </resources>
