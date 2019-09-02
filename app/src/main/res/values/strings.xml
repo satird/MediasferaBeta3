@@ -74,4 +74,9 @@
     <string name="card_magazine_deferred">Отложенные журналы и статьи</string>
     <string name="card_magazine_archive">Архив журналов и статей</string>
     <string name="back_hint">Назад</string>
+
+    <string name="edit_text_name">Добавьте ваше имя</string>
+    <string name="edit_text_mail">Добавьте вашу почту</string>
+    <string name="user_avatar">user avatar</string>
+    <string name="accaunt_title">Аккаунт</string>
 </resources>

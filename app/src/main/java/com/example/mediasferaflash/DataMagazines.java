@@ -5,12 +5,21 @@ public class DataMagazines {
     private String magazineInfo;
     private String magazineDescription;
     private String magazineCover;
+    private String imd;
 
     public DataMagazines(String magazineName, String magazineInfo, String magazineDescription, String magazineCover) {
         this.magazineName = magazineName;
         this.magazineInfo = magazineInfo;
         this.magazineDescription = magazineDescription;
         this.magazineCover = magazineCover;
+    }
+
+    public String getImd() {
+        return imd;
+    }
+
+    public void setImd(String imd) {
+        this.imd = imd;
     }
 
     public DataMagazines() {

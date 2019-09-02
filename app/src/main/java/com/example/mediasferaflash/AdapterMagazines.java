@@ -47,6 +47,7 @@ public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.Data
             intent.putExtra("titleMagazineDetail", dataMagazine.getMagazineName());
             intent.putExtra("infoMagazineDetail", dataMagazine.getMagazineInfo());
             intent.putExtra("descriptionMagazineDetail", dataMagazine.getMagazineDiscription());
+            intent.putExtra("imd", dataMagazine.getImd());
             context.startActivity(intent);
         }
     }

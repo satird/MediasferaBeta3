@@ -43,6 +43,7 @@ public class DetailMagazin extends AppCompatActivity {
         TextView title = findViewById(R.id.magazineDetailTitle);
         TextView info = findViewById(R.id.magazineDetailInfo);
         TextView description = findViewById(R.id.magazineDetailDescription);
+        TextView imd = findViewById(R.id.imd);
         ImageView image = findViewById(R.id.magazineDetailImage);
 
         Intent intent = getIntent();
@@ -50,6 +51,7 @@ public class DetailMagazin extends AppCompatActivity {
             title.setText(intent.getStringExtra("titleMagazineDetail"));
             info.setText(intent.getStringExtra("infoMagazineDetail"));
             description.setText(intent.getStringExtra("descriptionMagazineDetail"));
+            imd.setText(intent.getStringExtra("imd"));
 //            image.setImageResource(intent.getIntExtra("imageMagazineDetail", 0));
             Picasso.get().load(intent.getStringExtra("imageMagazineDetail")).into(image);
 

@@ -31,6 +31,9 @@ public class FragmentChildMainTab2 extends Fragment {
     private List<DataMagazines> dataMagazines;
     private RecyclerView rv;
     private RequestQueue requestQueue;
+    public static final String BASE_POSTER_URL = "https://image.tmdb.org/t/p/";
+    public static final String SMALL_POSTER_SIZE = "w342";
+    public static final String BIG_POSTER_SIZE = "w780";
 
     public static FragmentChildMainTab2 newInstance() {
         return new FragmentChildMainTab2();
@@ -49,7 +52,7 @@ public class FragmentChildMainTab2 extends Fragment {
 
 //        initializeData();
 //        initializeAdapter();
-        dataMagazines = new ArrayList<>();
+
         requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
 
         getMovies();
@@ -64,21 +67,22 @@ public class FragmentChildMainTab2 extends Fragment {
     }
 
     private void getMovies() {
-        String url = "https://www.omdbapi.com/?apikey=a31a6601&s=batman";
+        String url = "https://api.themoviedb.org/3/discover/movie?api_key=d573d05582a25d40d9c1010f903a6d32&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            List<DataMagazines> dataMagazines = new ArrayList<>();
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("Search");
+                    JSONArray jsonArray = response.getJSONArray("results");
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        String magazineName = jsonObject.getString("Title");
-                        String magazineInfo = jsonObject.getString("Year");
-                        String magazineDescription = jsonObject.getString("Type");
-                        String magazineCover = jsonObject.getString("Poster");
+                        String magazineName = jsonObject.getString("title");
+                        String magazineInfo = jsonObject.getString("release_date");
+                        String magazineDescription = jsonObject.getString("overview");
+                        String magazineCover = BASE_POSTER_URL + SMALL_POSTER_SIZE + jsonObject.getString("poster_path");
 
                         DataMagazines dataMagazine = new DataMagazines();
                         dataMagazine.setMagazineName(magazineName);

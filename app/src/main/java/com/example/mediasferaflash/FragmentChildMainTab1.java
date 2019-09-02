@@ -91,12 +91,14 @@ public class FragmentChildMainTab1 extends Fragment {
                         String magazineInfo = jsonObject.getString("Year");
                         String magazineDescription = jsonObject.getString("Type");
                         String magazineCover = jsonObject.getString("Poster");
+                        String imd = jsonObject.getString("imdbID");
 
                         DataMagazines dataMagazine = new DataMagazines();
                         dataMagazine.setMagazineName(magazineName);
                         dataMagazine.setMagazineInfo(magazineInfo);
                         dataMagazine.setMagazineDiscription(magazineDescription);
                         dataMagazine.setMagazineCover(magazineCover);
+                        dataMagazine.setImd(imd);
 
                         dataMagazines.add(dataMagazine);
                     }
