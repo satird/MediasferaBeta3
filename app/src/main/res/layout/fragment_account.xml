@@ -9,12 +9,9 @@
         android:id="@+id/account_top_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/colorLightBg"
         android:orientation="vertical"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp">
+        android:paddingBottom="12dp">
 
         <LinearLayout
             android:id="@+id/account_heading"
@@ -22,6 +19,12 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
             tools:ignore="UseCompoundDrawables">
 
             <TextView
@@ -40,58 +43,88 @@
 <!--                android:src="@drawable/camera"-->
 <!--                android:background="@drawable/circle"-->
 <!--                android:contentDescription="@string/user_avatar" />-->
-            <androidx.cardview.widget.CardView
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                app:cardPreventCornerOverlap="false"-->
+<!--                app:cardCornerRadius="25dp">-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/account_avatar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:contentDescription="@string/user_avatar"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/camera" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_width="1dp"
+                app:civ_border_color="#d1d1d1"
+                android:id="@+id/account_avatar"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardCornerRadius="25dp">
-                <ImageView
-                    android:id="@+id/account_avatar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/user_avatar"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/camera" />
-            </androidx.cardview.widget.CardView>
+                android:contentDescription="@string/user_avatar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camera" />
         </LinearLayout>
-        <View style="@style/Divider.Horizontal"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
+            android:layout_marginBottom="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/account_heading">
-
-            <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/profileBtn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:hintTextAppearance="@style/HintText">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/account_user_name"
-                    style="@style/MyEditTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/edit_text_name" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:clickable="true"
+                android:onClick="loginSignUpUser"
+                android:text="@string/profileBtn"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="75dp"
+                android:paddingEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/text_lines_top_bottom"
+                android:focusable="true" />
+            <TextView
+                android:id="@+id/languageBtn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:hintTextAppearance="@style/HintText">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/account_user_mail"
-                    style="@style/MyEditTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/edit_text_mail" />
-            </com.google.android.material.textfield.TextInputLayout>
-
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:clickable="true"
+                android:onClick="loginSignUpUser"
+                android:text="@string/languageBtn"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="75dp"
+                android:paddingEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/text_lines_top_bottom"
+                android:focusable="true" />
+            <TextView
+                android:id="@+id/restoreBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:clickable="true"
+                android:onClick="loginSignUpUser"
+                android:text="@string/restoreBtn"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="75dp"
+                android:paddingEnd="40dp"
+                android:background="@drawable/text_lines_top_bottom"
+                android:focusable="true" />
         </LinearLayout>
-
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

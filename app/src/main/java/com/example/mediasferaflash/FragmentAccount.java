@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,8 +40,12 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class FragmentAccount extends Fragment {
+public class FragmentAccount extends Fragment implements View.OnClickListener {
 //    private ImageView btn;
+    TextView profileBtn;
+    TextView languageBtn;
+    TextView restoreBtn;
+
     private ImageView imageview;
     private static final String IMAGE_DIRECTORY = "/demonuts";
     private int GALLERY = 1, CAMERA = 2;
@@ -56,6 +61,13 @@ public class FragmentAccount extends Fragment {
         requestMultiplePermissions();
 
 //        btn = (ImageView) rootView.findViewById(R.id.account_avatar);
+        TextView profileBtn = (TextView) rootView.findViewById(R.id.profileBtn);
+        TextView languageBtn = (TextView) rootView.findViewById(R.id.languageBtn);
+        TextView restoreBtn = (TextView) rootView.findViewById(R.id.restoreBtn);
+        profileBtn.setOnClickListener(this);
+        languageBtn.setOnClickListener(this);
+        restoreBtn.setOnClickListener(this);
+
         imageview = (ImageView) rootView.findViewById(R.id.account_avatar);
 
         imageview.setOnClickListener(new View.OnClickListener() {
@@ -206,4 +218,13 @@ public class FragmentAccount extends Fragment {
                 .check();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.profileBtn:
+                Intent intent = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }

@@ -3,6 +3,7 @@ package com.example.mediasferaflash;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+    public void loginSignUpUser(View view) {
+    }
+
     private static class GooglePlusFragmentPageAdapter extends FragmentPagerAdapter {
 
 

@@ -79,4 +79,11 @@
     <string name="edit_text_mail">Добавьте вашу почту</string>
     <string name="user_avatar">user avatar</string>
     <string name="accaunt_title">Аккаунт</string>
+    <string name="edit_text_password">Введите пароль</string>
+    <string name="edit_text_confirm_password">Повторите пароль</string>
+    <string name="signInBtn">Войти</string>
+    <string name="languageBtn">Язык</string>
+    <string name="restoreBtn">Восстановить покупки</string>
+    <string name="profileBtn">Мои данные</string>
+    <string name="detailMagazineBackground">Обложка на заднем фоне</string>
 </resources>
