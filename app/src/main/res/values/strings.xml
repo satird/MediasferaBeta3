@@ -81,9 +81,12 @@
     <string name="accaunt_title">Аккаунт</string>
     <string name="edit_text_password">Введите пароль</string>
     <string name="edit_text_confirm_password">Повторите пароль</string>
-    <string name="signInBtn">Войти</string>
+    <string name="signInBtn">Зарегистрироваться</string>
     <string name="languageBtn">Язык</string>
     <string name="restoreBtn">Восстановить покупки</string>
     <string name="profileBtn">Мои данные</string>
     <string name="detailMagazineBackground">Обложка на заднем фоне</string>
+    <string name="setting_sun">Настройки</string>
+    <string name="textSignUpBtn">Уже есть аккаунт?</string>
+    <string name="signUpBnt">Войдите</string>
 </resources>

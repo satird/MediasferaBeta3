@@ -3,6 +3,7 @@ package com.example.mediasferaflash;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,15 @@ public class ProfileActivity extends AppCompatActivity {
     private TextInputLayout accountUserMail;
     private TextInputLayout accountUserPassword;
     private TextInputLayout accountUserConfirmPassword;
-    private TextView signInBtn;
+    private Button signInBtn;
+    private TextView textSignInBtn;
+    private TextView signUpBtn;
+
+    private boolean isLoginModeActive;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.detail_menu, menu);
+        getMenuInflater().inflate(R.menu.setting_menu, menu);
         return true;
     }
     @Override
@@ -38,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        toolbar = findViewById(R.id.toolbar_logo_qr);
+        toolbar = findViewById(R.id.toolbar_logo_setting);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.arrow_left_black);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
@@ -49,7 +54,10 @@ public class ProfileActivity extends AppCompatActivity {
         accountUserMail =(TextInputLayout) findViewById(R.id.account_user_mail);
         accountUserPassword =(TextInputLayout) findViewById(R.id.account_user_password);
         accountUserConfirmPassword =(TextInputLayout) findViewById(R.id.account_user_confirm_password);
-        signInBtn =(TextView) findViewById(R.id.signInBtn);
+        signInBtn =(Button) findViewById(R.id.signInBtn);
+        textSignInBtn = (TextView) findViewById(R.id.textSignInBtn);
+        signUpBtn = (TextView) findViewById(R.id.signUpBtn);
+
 
 //        signInBtn.setOnClickListener(this);
     }
@@ -102,5 +110,25 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(this, userInput, Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    public void toggleLoginSignInUser(View view) {
+
+        if (isLoginModeActive) {
+            isLoginModeActive = false;
+            signInBtn.setText("Зарегистрироваться");
+            textSignInBtn.setText("Уже есть аккаунт? ");
+            signUpBtn.setText("Войдите");
+            accountUserConfirmPassword.setVisibility(View.VISIBLE);
+            accountUserName.setVisibility(View.VISIBLE);
+        } else {
+            isLoginModeActive = true;
+            signInBtn.setText("Войти");
+            textSignInBtn.setText("Нет аккаунта? ");
+            signUpBtn.setText("Зарегестрироваться");
+            accountUserConfirmPassword.setVisibility(View.GONE);
+            accountUserName.setVisibility(View.GONE);
+        }
+
     }
 }
