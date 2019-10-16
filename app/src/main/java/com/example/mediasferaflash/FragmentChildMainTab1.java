@@ -76,7 +76,7 @@ public class FragmentChildMainTab1 extends Fragment {
     }
 
     private void getMovies() {
-        String url = "https://www.omdbapi.com/?apikey=a31a6601&s=superman";
+        String url = "http://test.satird.ru/test.json";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -89,9 +89,9 @@ public class FragmentChildMainTab1 extends Fragment {
 
                         String magazineName = jsonObject.getString("Title");
                         String magazineInfo = jsonObject.getString("Year");
-                        String magazineDescription = jsonObject.getString("Type");
-                        String magazineCover = jsonObject.getString("Poster");
-                        String imd = jsonObject.getString("imdbID");
+                        String magazineDescription = jsonObject.getString("Description");
+                        String magazineCover = jsonObject.getString("Cover");
+                        String imd = jsonObject.getString("Type");
 
                         DataMagazines dataMagazine = new DataMagazines();
                         dataMagazine.setMagazineName(magazineName);

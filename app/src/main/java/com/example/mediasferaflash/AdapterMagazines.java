@@ -16,17 +16,17 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.DataMagazinesViewHolder> {
+public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.AdapterMagazinesViewHolder> {
     private List<DataMagazines> dataMagazines;
     private Context context;
 
-    public class DataMagazinesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class AdapterMagazinesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CardView cv;
         TextView magName;
         TextView magInfo;
         TextView magDiscription;
         ImageView magCover;
-        DataMagazinesViewHolder(View itemView) {
+        AdapterMagazinesViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
 
@@ -60,20 +60,27 @@ public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.Data
 
     @NonNull
     @Override
-    public DataMagazinesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.magazine_item, parent, false);
-        DataMagazinesViewHolder pvh = new DataMagazinesViewHolder(v);
-        return pvh;
+    public AdapterMagazinesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+//        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.magazine_item, parent, false);
+
+        Context context = parent.getContext();
+        int layoutIdForListItem = R.layout.magazine_item;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(layoutIdForListItem, parent, false);
+
+        AdapterMagazinesViewHolder newViewHolder = new AdapterMagazinesViewHolder(view);
+        return newViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DataMagazinesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterMagazinesViewHolder holder, int position) {
         DataMagazines currentDataMagazines = dataMagazines.get(position);
 
         String magName = currentDataMagazines.getMagazineName();
         String magInfo = currentDataMagazines.getMagazineInfo();
         String magDiscription = currentDataMagazines.getMagazineDiscription();
-//        int magCover = currentDataMagazines.getMagazineCover();
+        String magCover = currentDataMagazines.getMagazineCover();
 
         holder.magName.setText(magName);
         holder.magInfo.setText(magInfo);
@@ -84,7 +91,8 @@ public class AdapterMagazines extends RecyclerView.Adapter<AdapterMagazines.Data
 //        holder.magInfo.setText(dataMagazines.get(position).getMagazineInfo());
 //        holder.magDiscription.setText(dataMagazines.get(position).getMagazineDiscription());
 //        holder.magCover.setImageResource(dataMagazines.get(position).getMagazineCover());
-        Picasso.get().load(dataMagazines.get(position).getMagazineCover()).fit().centerInside().into(holder.magCover);
+//        Picasso.get().load(dataMagazines.get(position).getMagazineCover()).fit().centerInside().into(holder.magCover);
+        Picasso.get().load(magCover).fit().centerInside().into(holder.magCover);
     }
 
     @Override

@@ -62,8 +62,8 @@
     <string name="discription_btn_login">или войдите в вашу учетную запись</string>
     <string name="black_btn_all_magazines">Все журналы</string>
     <string name="orange_btn_login">Регистрация / Вход</string>
-    <string name="book_discription">Книга</string>
-    <string name="arrow_btn_discription">Стрелка перейти по со кнопке</string>
+    <string name="book_description">Книга</string>
+    <string name="arrow_btn_description">Стрелка перейти по со кнопке</string>
 
     <string name="card_name">Оперативная хирургия и клиническая анатомия</string>
     <string name="card_number">том 72, №1 (2018)</string>
@@ -89,4 +89,21 @@
     <string name="setting_sun">Настройки</string>
     <string name="textSignUpBtn">Уже есть аккаунт?</string>
     <string name="signUpBnt">Войдите</string>
+    <string name="subscribe">Оформить подписку</string>
+    <string name="btn_last_number">Последний номер</string>
+    <string name="btn_archive_magazines">Архив журнала</string>
+    <string name="buscet_icon_description">Оформить подписку</string>
+    <string name="last_magazine_description">Иконка меню с точками</string>
+    <string name="copy_doc_description">Архив журналов</string>
+    <string name="detail_magazine_caption_start">В ахиве доступны</string>
+    <string name="detail_magazine_caption_finish">выпуски за прошлые года</string>
+    <string name="detail_magazine_caption_orange">бесплатные</string>
+    <string name="detail_title_top">О журнале</string>
+    <string name="detail_magazine_title_h2">Журнал размещен в базах:</string>
+    <string name="logo_image">картинка логотипа</string>
+    <string name="founders">Учредители:</string>
+    <string name="magazine_content">Содержание</string>
+    <string name="content_magazine_description">В соответствии с политикой издательства, в каждом новом выпуске одна статья (наиболее интересная по мнению редакции) выкладывается в открытом доступе</string>
+    <string name="bookmark_icon">bookmark icon</string>
+    <string name="article_price">Купить за 530 руб.</string>
 </resources>

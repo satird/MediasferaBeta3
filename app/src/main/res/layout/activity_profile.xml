@@ -98,8 +98,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/account_user_name"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:errorEnabled="true"
+                    android:layout_height="wrap_content"
                     app:hintTextAppearance="@style/HintText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -113,8 +112,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/account_user_mail"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:errorEnabled="true"
+                    android:layout_height="wrap_content"
                     app:hintTextAppearance="@style/HintText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -129,8 +127,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/account_user_password"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:errorEnabled="true"
+                    android:layout_height="wrap_content"
                     app:hintTextAppearance="@style/HintText"
                     app:passwordToggleEnabled="true">
 
@@ -145,8 +142,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/account_user_confirm_password"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:errorEnabled="true"
+                    android:layout_height="wrap_content"
                     app:hintTextAppearance="@style/HintText"
                     app:passwordToggleEnabled="true">
 
